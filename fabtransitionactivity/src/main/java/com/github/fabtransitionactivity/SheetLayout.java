@@ -165,9 +165,14 @@ public class SheetLayout extends FrameLayout {
         mFabType = FAB_EXPAND;
         mAnimatingFab = true;
 
-        // Center point on the screen of the FAB.
-        int x = (int) (centerX(mFab));
-        int y = (int) (centerY(mFab));
+        int cx = mFab.getLeft();
+        int cy = mFab.getTop();
+        
+        int cy1 = mFab.getRight();
+        int cy1 = mFab.getBottom();
+        
+        int x = (int) (cx1 - cx);
+        int y = (int) (cy1 - cy);
 
         // Start and end radius of the sheet expand animation.
         float startRadius = getFabSizePx() / 2;
